@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: register-app-service
+  name: prayag-new1
   labels:
-    app: register-app 
+    app: prayag-new1
 spec:
   selector:
-    app: register-app
+    app: prayag-new1
 
   ports:
     - port: 8080
