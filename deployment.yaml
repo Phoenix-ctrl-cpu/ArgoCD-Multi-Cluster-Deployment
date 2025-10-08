@@ -13,7 +13,7 @@ spec:
         app: prayag-new1
     spec:
       containers:
-        - name: register-app
+        - name: prayag-new1
           image: prayag8tiwari/prayag-new1-pipeline:1.0.0-7
           resources:
             limits:
