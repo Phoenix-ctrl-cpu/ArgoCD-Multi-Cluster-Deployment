@@ -36,7 +36,7 @@ pipeline {
                    git commit -m "Updated Deployment Manifest"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                  sh "git push https://github.com/Phoenix-ctrl-cpu/ArgoCD-Multi-Cluster-Deployment"
+                  sh "git push https://github.com/Phoenix-ctrl-cpu/ArgoCD-Multi-Cluster-Deployment main"
                 }
             }
         }
