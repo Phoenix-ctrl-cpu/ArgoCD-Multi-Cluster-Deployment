@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "Jenkins-Agent" }
+    agent { label "prayagcloud" }
     environment {
               APP_NAME = "prayag-new1-pipeline"
     }
