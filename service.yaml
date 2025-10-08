@@ -9,7 +9,7 @@ spec:
     app: prayag-new1
 
   ports:
-    - port: 9000
-      targetPort: 9000
+    - port: 8080
+      targetPort: 8080
 
   type: LoadBalancer
