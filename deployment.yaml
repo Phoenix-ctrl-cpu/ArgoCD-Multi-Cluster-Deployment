@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: prayag-dev
-          image: prayag8tiwari/prayag-new1-pipeline:1.0.0-7
+          image: prayag8tiwari/prayag-new1-pipeline:latest
           resources:
             limits:
               memory: "256Mi"
