@@ -6,11 +6,11 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: prayag-dev
+      app: prayag-new1
   template:
     metadata:
       labels:
-        app: prayag-dev
+        app: prayag-new1
     spec:
       containers:
         - name: prayag-new1
