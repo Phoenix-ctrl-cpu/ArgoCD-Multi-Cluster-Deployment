@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prayag-new1-deployment
+  name: prayag-prod-deployment
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: prayag-new1
+      app: prayag-prod
   template:
     metadata:
       labels:
-        app: prayag-new1
+        app: prayag-prod
     spec:
       containers:
-        - name: prayag-new1
+        - name: prayag-prod
           image: prayag8tiwari/prayag-new1-pipeline:1.0.0-7
           resources:
             limits:
