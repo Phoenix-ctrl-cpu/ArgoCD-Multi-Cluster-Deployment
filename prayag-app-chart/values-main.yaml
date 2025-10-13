@@ -1,0 +1,52 @@
+# Production (main) environment values
+environment: "main"
+
+replicaCount: 4
+
+image:
+  repository: prayag8tiwari/prayag-new1-pipeline
+  tag: "1.0.0-7"
+  pullPolicy: IfNotPresent
+
+resources:
+  limits:
+    memory: "512Mi"
+    cpu: "1000m"
+  requests:
+    memory: "256Mi"
+    cpu: "500m"
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  hosts:
+    - host: prayag-app.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: prayag-app-tls
+      hosts:
+        - prayag-app.example.com
+
+# Enable autoscaling for production
+autoscaling:
+  enabled: true
+  minReplicas: 4
+  maxReplicas: 20
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 80
+
+# Production specific annotations
+podAnnotations:
+  environment: "main"
+  branch: "main"
+  monitoring: "enabled"
