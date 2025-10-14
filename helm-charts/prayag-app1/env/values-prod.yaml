@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: prayag8tiwari/prayag-new1-pipeline
-  tag: "1.0.0-prod"
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 resources:
@@ -14,7 +14,7 @@ resources:
     memory: 128Mi
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 8080
 
 env: "staging"
