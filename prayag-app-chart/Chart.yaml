@@ -1,0 +1,16 @@
+apiVersion: v2
+name: prayag-app
+description: A Helm chart for prayag-new1 application
+type: application
+version: 0.1.0
+appVersion: "1.0.0-7"
+keywords:
+  - web
+  - application
+  - prayag
+home: https://github.com/prayag8tiwari/prayag-new1-pipeline
+sources:
+  - https://github.com/prayag8tiwari/prayag-new1-pipeline
+maintainers:
+  - name: prayag8tiwari
+    email: prayag8tiwari@example.com
